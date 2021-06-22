@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+  * {
+    box-sizing: inherit;
+  }
+
+  html {
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+  }
+
+  section {
+    height: 100%;
+  }
+
+  body {
+    text-align: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  #mainWraper {
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 0fr 0fr auto;
+  }
+
+  footer {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+    background-color: #0f141c;
+  }
+
+  button {
+    padding: 5px 10px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }

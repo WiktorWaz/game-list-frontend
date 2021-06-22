@@ -1,0 +1,10 @@
+<h3 *ngIf="gamesList?.length !== 0" class="listTitle">Moja lista gier:</h3>
+<div *ngFor="let game of gamesList; let odd = odd" [ngClass]="odd ? 'listBeckground-1' : 'listBeckground-2'">
+
+  <span><br> Nazwa gry: {{game.name}}</span><br>
+  <span>Firma: {{game.company}}</span><br>
+  <span>Ocena: {{game.score}}</span><br>
+  <span>Status: {{game.status}}</span><br><br>ng 
+  <button class="mat-stroked-button" (click)="removeGame(game.id)">Usuń<i
+      class="far fa-trash-alt"></i></button><br><br>
+</div>

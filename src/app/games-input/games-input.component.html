@@ -1,0 +1,16 @@
+<h3>Dodaj nową grę: </h3>
+<div>
+  <input class="addGameTextInput" type="text" placeholder="Nazwa gry" [(ngModel)]="singleGame.name" (keyup)=" buttonDisabled()"><br>
+  <input class="addGameTextInput" type="text" placeholder="Producent" [(ngModel)]="singleGame.company"(keyup)=" buttonDisabled()"><br>
+
+    <input class="addGameRangeInput" type="range" name="score"
+           min="1" max="10" [(ngModel)]="singleGame.score">
+    <label for="score">Ocena: {{singleGame.score}}</label><br>
+
+ 
+  <h3>Status:</h3>
+    <label><input class="addGameRadioInput"  type="radio" name="gameStatus" value="Gra zakończona" [(ngModel)]="singleGame.status" (click)="changeStatus(); buttonDisabled()">Gra zakończona</label><br>
+    <label><input class="addGameRadioInput" type="radio" name="gameStatus" value="W trakcie przechodzenia"[(ngModel)]="singleGame.status"(click)="changeStatus(); buttonDisabled()" >W trakcie przechodzenia</label><br>
+    <label><input class="addGameRadioInput" type="radio" name="gameStatus" value="Gra do przejścia"[(ngModel)]="singleGame.status" (click)="changeStatus(); buttonDisabled()">Gra do przejścia</label><br><br>
+  <button [class.mat-stroked-button]="!inputBoolean" [class.disabled]="inputBoolean" (click)="addGame()" [disabled]="inputBoolean">Dodaj grę</button>
+</div>
