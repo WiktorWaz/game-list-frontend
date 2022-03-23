@@ -22,11 +22,6 @@ export class GamesListComponent {
   init(): void {
   }
 
-  // onNewGame(game: Games) {
-  //   this.http.postGame(game).subscribe();
-  //   this.init();
-  // }
-
   removeGame(id: number) {
     this.removeGameHandler.emit(id);
   }
